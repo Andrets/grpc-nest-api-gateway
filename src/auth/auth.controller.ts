@@ -13,7 +13,7 @@ import {
 @Controller('auth')
 export class AuthController implements OnModuleInit {
   constructor(
-    private service: AuthServiceClient,
+    @Inject(AUTH_SERVICE_NAME) private service: AuthServiceClient,
     @Inject(AUTH_SERVICE_NAME) private readonly client: ClientGrpc,
   ) {}
 

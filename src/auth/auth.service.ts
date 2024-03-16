@@ -10,7 +10,7 @@ import {
 @Injectable()
 export class AuthService {
   constructor(
-    private service: AuthServiceClient,
+    @Inject(AUTH_SERVICE_NAME) private service: AuthServiceClient,
     @Inject(AUTH_SERVICE_NAME) private readonly client: ClientGrpc,
   ) {}
 
