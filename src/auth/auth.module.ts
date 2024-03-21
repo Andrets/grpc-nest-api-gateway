@@ -16,7 +16,7 @@ import { AuthService } from './auth.service';
         ): Promise<GrpcOptions> => ({
           transport: Transport.GRPC,
           options: {
-            url: configService.get<string>('AUTH_GRPC_URL'),
+            url: configService.get<string>('GRPC_URL'),
             package: AUTH_PACKAGE_NAME,
             protoPath: 'node_modules/grpc-proto/proto/auth.proto',
           },
